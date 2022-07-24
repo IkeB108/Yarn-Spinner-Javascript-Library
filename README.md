@@ -7,6 +7,9 @@ Also adds extra functionality to your Yarn Spinner dialogue.
 2. In the Yarn Spinner editor, click File -> Save as JSON
 3. Once the JSON object is in your Javascript project, create an instance of DialogueTree: `myDialogue = new DialogueTree( some_json_object )`
 4. Poke around to see what your new dialogue tree object looks like
+
+
+
 ## Properties
 Your DialogueTree object comes with useful properties:
 - `name`: The name of the dialogue tree (can be changed manually; default is the title of the first node)
@@ -27,7 +30,10 @@ Your DialogueTree object comes with useful properties:
   - `colorID` and `position`: Extra info from Yarn Spinner which is likely not relevant once your dialogue is exported.
 - `nodeHistory`: An array of node indeces from `nodes`. Lists previously active nodes in the order they were made active
 - `originalJSON`: The JSON object which was exported from Yarn Spinner.
-### Methods
+
+
+
+## Methods
 #### setActiveNode
 ```javascript
 myDialogue.setActiveNode( nodeTitle, [ignoreCommands] )
@@ -43,4 +49,23 @@ Follows the nth link in the list of links from the active node, where n is `link
 - `linkIndex`: Number: Index of the link to follow (or a string: the display text of the link to follow)
 - `displayLinksOnly`: Optional Boolean. When true, this method will follow the linkIndex from the node's `displayLinks` array instead of the array of all links (recommended). Default is false.
 - `ignoreCommands`: Optional Boolean. When true, any Javascript commands in the body of the new node will not be executed. Default is false.
+#### getNode
+```javascript
+myDialogue.getNode( nodeTitle )
+```
+Returns the node that has the given title.
+- `nodeTitle`: String. The title of the node you wish to retrieve
+#### getNodeIndex
+```javascript
+myDialogue.getNodeIndex( nodeTitle )
+```
+Returns the index of the node that has the given title in the `nodes` array
+- `nodeTitle`: String. The title of the node you wish to retrieve
+#### getNodesByTag
+```javascript
+myDialogue.getNodesByTag( nodeTag, [returnIndex] )
+```
+Returns an array of nodes that include the provided tag.
+- `nodeTag`: String. The name of the tag to search for.
+- `returnIndex`: Optional Boolean. When true, returns the nodes' indeces instead of the nodes themselves
 ## Extra functionality
