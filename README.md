@@ -24,7 +24,7 @@ All of these features are optional.
   - The conditional is evaluated with `eval`
 - Add tags to links using curly brackets: `[[myLink]]{{tagForLink}}`
   - The tag will be added to the link object's `tags` array
-  - The `{{alwaysDisplay}}` tag will make the link always appear in `displayLinks` even if its condition is not met
+  - The `{{alwaysDisplay}}` tag will make the link always appear in the node's `displayLinks` array even if its condition is not met
 - String interpolation: expressions within `${}` are evaluated in the body text.
 
 ## Properties
