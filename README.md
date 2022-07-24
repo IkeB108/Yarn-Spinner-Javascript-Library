@@ -1,4 +1,4 @@
-# Yarn-Spinner-Library
+# Yarn Spinner Javascript Library
 An easy way to integrate dialogue trees created with [Yarn Spinner](https://yarnspinnertool.github.io/YarnEditor/) into your Javascript project.
 
 Also adds extra functionality to your Yarn Spinner dialogue.
@@ -13,7 +13,8 @@ Also adds extra functionality to your Yarn Spinner dialogue.
 
 ## Features you can use in the Yarn Spinner editor
 All of these features are optional.
-![exampleNode](https://user-images.githubusercontent.com/56776763/180628012-3d6fe6e0-6185-42be-8f18-26759d836df7.PNG)
+
+![exampleNode](https://user-images.githubusercontent.com/56776763/180628070-ee2ef5bc-053d-4222-a1c8-821f49d644e1.PNG)
 
 - Add Javascript commands to the body of your node with angle brackets: `<< command here >>`
   - The command will be executed with `eval` when the node is made active by either `setActiveNode()` or `followLink()`
@@ -24,6 +25,7 @@ All of these features are optional.
 - Add tags to links using curly brackets: `[[myLink]]{{tagForLink}}`
   - The tag will be added to the link object's `tags` array
   - The `{{alwaysDisplay}}` tag will make the link always appear in `displayLinks` even if its condition is not met
+- String interpolation: expressions within `${}` are evaluated in the body text.
 
 ## Properties
 Your DialogueTree object comes with useful properties:
@@ -71,7 +73,7 @@ Follows the nth link in the list of links from the active node, where n is `link
 myDialogue.getNode( nodeTitle )
 ```
 Returns the node that has the given title.
-- `nodeTitle`: String. The title of the node you wish to retrieve
+- `nodeTitle`: String. The title (or index) of the node you wish to retrieve
 #### getNodeIndex
 ```javascript
 myDialogue.getNodeIndex( nodeTitle )
