@@ -1,7 +1,7 @@
 # Yarn Spinner Javascript Library
 An easy way to integrate dialogue trees created with [Yarn Spinner](https://yarnspinnertool.github.io/YarnEditor/) into your Javascript project.
 
-Also adds extra functionality to your Yarn Spinner dialogue.
+This library parses all the bodies of your nodes and returns an object containing all the nodes in a much more useful format. It also allows you to do more with the Yarn Spinner Editor than its creators intended.
 ## How to Use
 1. Add the script to your project's HTML file: `<script type="text/javascript" src="yarnSpinner.js"></script>`
 2. In the Yarn Spinner editor, click File -> Save as JSON
