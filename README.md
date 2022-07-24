@@ -13,7 +13,8 @@ Also adds extra functionality to your Yarn Spinner dialogue.
 
 ## Features you can use in the Yarn Spinner editor
 All of these features are optional.
-[Image of an example node](https://raw.githubusercontent.com/IkeB108/Yarn-Spinner-Library/main/exampleNode.PNG)
+![exampleNode](https://user-images.githubusercontent.com/56776763/180628012-3d6fe6e0-6185-42be-8f18-26759d836df7.PNG)
+
 - Add Javascript commands to the body of your node with angle brackets: `<< command here >>`
   - The command will be executed with `eval` when the node is made active by either `setActiveNode()` or `followLink()`
 - Add conditions to links by putting them after the link: `[[myLink]]<< playerCoins >= 10 >>`
